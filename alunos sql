@@ -1,0 +1,148 @@
+CREATE DATABASE IF NOT EXISTS alunos;
+
+USE alunos;
+
+DROP TABLE IF EXISTS disciplinas;
+DROP TABLE IF EXISTS turmas;
+DROP TABLE IF EXISTS turmas1;
+
+CREATE TABLE disciplinas (
+  CodDisc varchar(6) NOT NULL default '',
+  NomeDisc varchar(30) NOT NULL default '',
+  NumNotas int(11) NOT NULL default '0',
+  NumCredDisc int(11) NOT NULL default '0',
+  PreReqDisc1 varchar(6) NOT NULL default '',
+  PreReqDisc2 varchar(6) NOT NULL default '',
+  PRIMARY KEY  (CodDisc)
+);
+
+--
+-- Dumping data for table `disciplinas`
+--
+
+INSERT INTO disciplinas VALUES ('103204','Programacao I',3,4,'','');
+INSERT INTO disciplinas VALUES ('103205','Programacao II',3,4,'103204','');
+INSERT INTO disciplinas VALUES ('103213','Top. Esp. em Programacao',3,4,'103205','');
+
+--
+-- Table structure for table `turmas`
+--
+
+CREATE TABLE turmas (
+  matricula varchar(8) NOT NULL default '',
+  nome varchar(35) NOT NULL default '',
+  disciplina varchar(6) NOT NULL default '',
+  turma char(2) NOT NULL default '',
+  nota1 float NOT NULL default '0',
+  nota2 float NOT NULL default '0',
+  nota3 float NOT NULL default '0',
+  faltas int(11) NOT NULL default '0'
+);
+
+--
+-- Dumping data for table `turmas`
+--
+
+INSERT INTO turmas VALUES ('03111195','Alan Yves Corbiniano Martins Leite','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('01112051','Alexandre Simoes de Melo','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03110061','Alexsandro Santos Silva','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('00111281','Aline Vasconcelos Santos','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('02111791','Amanda Silva Santana','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('02110940','Antonio Carlos A. de Oliveira','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('00111517','Antonio Ferreira de Souza Neto','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03114149','Aristoteles Augusto Da Silva Neto','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03114930','Bruno Tulio Santana Tavares','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03113889','Catuxe Varjao de Santana Oliveira','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('02112795','Cristian Wagner Bons','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('02113521','Daniela Santos Cruz','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03113145','Edson Santos de Jesus','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03114924','Fabiane Lazaro Bigi','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03110448','Felipe de Oliveira Lima','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03113805','Gabriel Viana Passos','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03113192','Gustavo Araujo Soares','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('02113631','Jairton Barreto da Graca','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03114222','Joao Paulo Lopes de Lacerda','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03110611','Joyce Priscilla dos Santos Sa','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('02110777','Kamilo Michelle dos Santos Lima','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03111111','Leonardo Bezerra Silva Junior','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03115137','Leticia Gindri','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('02110871','Marco Aurelio Cruz Fonseca','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03113852','Matheus Menezes de OlIveira	','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03112781','Matheus Telles Barreto','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03112403','Paulo Alceu Veiga de Oliveira','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('02111351','Paulo Menezes Costa	','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03110260','Rafael Mendonca Franca','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03111881','Renato Jose Santos Maciel','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03112733','Rigel Alves Rabelo de Oliveira','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03111834','Thadeu Henrique R. Meneses	','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03110977','Thiago de Freitas Maranhao 		','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03112995','Ulysses de Amorim Oliveira 		','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03112047','Uriel Marx da Cunha Bispo		','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03114568','Vilnei Leite Bottari	','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03113915','Wagner Amaral e Silva','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03111950','Wagner Andrade de Lucena','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03112471','Wesley Andrade Silva		','103205','A0',0,0,0,0);
+INSERT INTO turmas VALUES ('03112073','Yuri Tavares dos Passos','103205','A0',0,0,0,0);
+
+--
+-- Table structure for table `turmas1`
+--
+
+CREATE TABLE turmas1 (
+  NumOrd int(11) NOT NULL default '0',
+  matricula varchar(8) NOT NULL default '',
+  nome varchar(35) NOT NULL default '',
+  disciplina varchar(6) NOT NULL default '',
+  turma char(2) NOT NULL default '',
+  nota1 float NOT NULL default '0',
+  nota2 float NOT NULL default '0',
+  nota3 float NOT NULL default '0',
+  faltas float NOT NULL default '0',
+  PRIMARY KEY  (NumOrd)
+);
+
+--
+-- Dumping data for table `turmas1`
+--
+
+INSERT INTO turmas1 VALUES (1,'03111195','Alan Yves Corbiniano Martins Leite','103205','A0',5.5,3,4.5,0);
+INSERT INTO turmas1 VALUES (2,'01112051','Alexandre Simoes de Melo','103205','A0',7,9.5,6,0);
+INSERT INTO turmas1 VALUES (3,'03110061','Alexsandro Santos Silva','103205','A0',1.5,3,4.5,0);
+INSERT INTO turmas1 VALUES (4,'00111281','Aline Vasconcelos Santos','103205','A0',8,10,7.5,0);
+INSERT INTO turmas1 VALUES (5,'02111791','Amanda Silva Santana','103205','A0',5,3.5,7,0);
+INSERT INTO turmas1 VALUES (6,'02110940','Antonio Carlos A. de Oliveira','103205','A0',10,9.5,7,0);
+INSERT INTO turmas1 VALUES (7,'00111517','Antonio Ferreira de Souza Neto','103205','A0',2.5,0,1,0);
+INSERT INTO turmas1 VALUES (8,'03114149','Aristoteles Augusto Da Silva Neto','103205','A0',3,5,1.5,0);
+INSERT INTO turmas1 VALUES (9,'03114930','Bruno Tulio Santana Tavares','103205','A0',2,4.5,6,0);
+INSERT INTO turmas1 VALUES (10,'03113889','Catuxe Varjao de Santana Oliveira','103205','A0',3,6,10,0);
+INSERT INTO turmas1 VALUES (11,'02112795','Cristian Wagner Bons','103205','A0',9,7,5.5,0);
+INSERT INTO turmas1 VALUES (12,'02113521','Daniela Santos Cruz','103205','A0',2,4.5,6,0);
+INSERT INTO turmas1 VALUES (13,'03113145','Edson Santos de Jesus','103205','A0',5,6.5,4,0);
+INSERT INTO turmas1 VALUES (14,'03114924','Fabiane Lazaro Bigi','103205','A0',1,0.5,0,0);
+INSERT INTO turmas1 VALUES (15,'03110448','Felipe de Oliveira Lima','103205','A0',3.5,5.5,7,0);
+INSERT INTO turmas1 VALUES (16,'03113805','Gabriel Viana Passos','103205','A0',7.5,8,9.5,0);
+INSERT INTO turmas1 VALUES (17,'03113192','Gustavo Araujo Soares','103205','A0',4,3.5,7,0);
+INSERT INTO turmas1 VALUES (18,'02113631','Jairton Barreto da Graca','103205','A0',6.5,8.5,7,0);
+INSERT INTO turmas1 VALUES (19,'03114222','Joao Paulo Lopes de Lacerda','103205','A0',5,5.5,4.5,0);
+INSERT INTO turmas1 VALUES (20,'03110611','Joyce Priscilla dos Santos Sa','103205','A0',6,8.5,7,0);
+INSERT INTO turmas1 VALUES (21,'02110777','Kamilo Michelle dos Santos Lima','103205','A0',0,7,6.5,0);
+INSERT INTO turmas1 VALUES (22,'03111111','Leonardo Bezerra Silva Junior','103205','A0',3.5,1,0,0);
+INSERT INTO turmas1 VALUES (23,'03115137','Leticia Gindri','103205','A0',7,4.5,6,0);
+INSERT INTO turmas1 VALUES (24,'02110871','Marco Aurelio Cruz Fonseca','103205','A0',2.5,5.5,4,0);
+INSERT INTO turmas1 VALUES (25,'03113852','Matheus Menezes de OlIveira	','103205','A0',3,7,6.5,0);
+INSERT INTO turmas1 VALUES (26,'03112781','Matheus Telles Barreto','103205','A0',10,8.5,7,0);
+INSERT INTO turmas1 VALUES (27,'03112403','Paulo Alceu Veiga de Oliveira','103205','A0',9.5,5.5,3.5,0);
+INSERT INTO turmas1 VALUES (28,'02111351','Paulo Menezes Costa	','103205','A0',4.5,3.5,0,0);
+INSERT INTO turmas1 VALUES (29,'03110260','Rafael Mendonca Franca','103205','A0',7.5,9,5.5,0);
+INSERT INTO turmas1 VALUES (30,'03111881','Renato Jose Santos Maciel','103205','A0',6,3.5,8.5,0);
+INSERT INTO turmas1 VALUES (31,'03112733','Rigel Alves Rabelo de Oliveira','103205','A0',4,7.5,6,0);
+INSERT INTO turmas1 VALUES (32,'03111834','Thadeu Henrique R. Meneses	','103205','A0',8,9.5,7.5,0);
+INSERT INTO turmas1 VALUES (33,'03110977','Thiago de Freitas Maranhao 		','103205','A0',4.5,3.5,1,0);
+INSERT INTO turmas1 VALUES (34,'03112995','Ulysses de Amorim Oliveira 		','103205','A0',6.5,8,10,0);
+INSERT INTO turmas1 VALUES (35,'03112047','Uriel Marx da Cunha Bispo		','103205','A0',1.5,0.5,0,0);
+INSERT INTO turmas1 VALUES (36,'03114568','Vilnei Leite Bottari	','103205','A0',3,1.5,6.5,0);
+INSERT INTO turmas1 VALUES (37,'03113915','Wagner Amaral e Silva','103205','A0',2,0,0,0);
+INSERT INTO turmas1 VALUES (38,'03111950','Wagner Andrade de Lucena','103205','A0',7,5.5,9,0);
+INSERT INTO turmas1 VALUES (39,'03112471','Wesley Andrade Silva		','103205','A0',2.5,5,7.5,0);
+INSERT INTO turmas1 VALUES (40,'03112073','Yuri Tavares dos Passos','103205','A0',10,9.5,8,0);
+
